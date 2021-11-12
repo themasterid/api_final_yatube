@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+/yatube_api/yatube_api/secrets.py
 # C extensions
 *.so
 
