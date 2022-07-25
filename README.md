@@ -122,3 +122,5 @@ POST /api/v1/jwt/verify/ - проверка JWT-токена
 ```bash
 GET /api/v1/posts/?limit=5&offset=0 - пагинация на 5 постов, начиная с первого
 ```
+
+Автор: [Дмитрий Клепиков](https://github.com/themasterid) :+1:

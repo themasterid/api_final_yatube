@@ -10,6 +10,8 @@ from posts.models import Group, Post
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
+    """Список групп."""
+
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
@@ -18,6 +20,8 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 class FollowViewSet(mixins.CreateModelMixin,
                     mixins.ListModelMixin,
                     viewsets.GenericViewSet):
+    """Список подписок."""
+
     serializer_class = FollowSerializer
     permission_classes = (permissions.IsAuthenticated,)
     filter_backends = (filters.SearchFilter,)
@@ -31,6 +35,8 @@ class FollowViewSet(mixins.CreateModelMixin,
 
 
 class PostViewSet(viewsets.ModelViewSet):
+    """Список постов."""
+
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (AuthorPermission,)
@@ -41,6 +47,8 @@ class PostViewSet(viewsets.ModelViewSet):
 
 
 class CommentViewSet(viewsets.ModelViewSet):
+    """Список комментариев."""
+
     serializer_class = CommentSerializer
     permission_classes = (AuthorPermission,)
 
